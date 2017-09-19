@@ -670,7 +670,7 @@
                     col = 0;
                     row++;
                 }
-                calendar[row][col] = curDate.clone().hour(hour).minute(minute).second(second);
+                calendar[row][col] = curDate.clone().utc().hour(hour).minute(minute).second(second);
                 curDate.hour(12);
 
                 if (this.minDate && calendar[row][col].format('YYYY-MM-DD') == this.minDate.format('YYYY-MM-DD') && calendar[row][col].isBefore(this.minDate) && side == 'left') {
